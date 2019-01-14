@@ -6,7 +6,7 @@ const seedsDirectory = '../seeds'
 const Config = require('../src/lib/config')
 
 module.exports = {
-  client: 'mysql',
+  client: 'postgres',
   connection: Config.DATABASE_URI,
   migrations: {
     directory: migrationsDirectory,

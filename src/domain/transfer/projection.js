@@ -19,7 +19,7 @@ const saveTransferPrepared = async (payload, stateReason = null, hasPassedValida
       const participant = await ParticipantService.getByName(name)
       participants.push(participant)
     }
-
+    console.log({ participants})
     const participantIds = await _.reduce(participants, (m, acct) => _.set(m, acct.name, acct.participantId), {})
 
     const transferRecord = {

@@ -7,7 +7,7 @@ exports.getById = async (id) => {
   try {
     return await Db.participant.findOne({ participantId: id })
   } catch (err) {
-    throw new Error(err.message)
+    throw new Error(err.message )
   }
 }
 

@@ -59,8 +59,14 @@ const getAll = async () => {
   }
 }
 
-const getById = (id) => {
-  return Model.getById(id)
+const getById =async  (id) => {
+  try{
+  const filed = await Model.getById(id)
+  console.log({field})
+  return
+  } catch (err){
+    throw new Error(err.message)
+  }
 }
 
 const getByName = (name) => {

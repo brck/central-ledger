@@ -11,7 +11,7 @@
     "SCALE": 2
   },
   "SIDECAR": {
-    "DISABLED": false,
+    "DISABLED": true,
     "HOST": "localhost",
     "PORT": 5678,
     "CONNECT_TIMEOUT": 45000,
@@ -23,7 +23,7 @@
   "KAFKA": {
     "TOPIC_TEMPLATES": {
       "PARTICIPANT_TOPIC_TEMPLATE": {
-        "TEMPLATE": "topic-{{participantName}}-{{functionality}}-{{action}}",
+        "TEMPLATE": "topic-BRCK-{{participantName}}-{{functionality}}-{{action}}",
         "REGEX": "topic-(.*)-(.*)-(.*)"
       },
       "GENERAL_TOPIC_TEMPLATE": {

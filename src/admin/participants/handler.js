@@ -44,7 +44,7 @@ const create = async function (request, h) {
     const participant = await Participant.getById(participantId)
     return h.response(entityItem(participant)).code(201)
   } catch (err) {
-    throw Boom.badRequest(err.message)
+    throw Boom.badRequest(err)
   }
 }
 
