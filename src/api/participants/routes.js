@@ -29,7 +29,7 @@ const Joi = require('joi')
 const currencyList = require('../../../seeds/currency.js').currencyList
 
 const tags = ['api', 'participants']
-const nameValidator = Joi.string().alphanum().min(2).max(30).required().description('Name of the participant')
+const nameValidator = Joi.string().min(2).max(100).required().description('Name of the participant')
 const currencyValidator = Joi.string().valid(currencyList).description('Currency code')
 
 module.exports = [

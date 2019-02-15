@@ -41,6 +41,7 @@ const saveTransferFulfilment = async (record) => {
   try {
     return await Db.transferFulfilment.insert(record)
   } catch (err) {
+    console.log(err)
     throw err
   }
 }
